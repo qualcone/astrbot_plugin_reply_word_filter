@@ -1,0 +1,8 @@
+name: astrbot_plugin_keyword_filter
+display_name: 关键词过滤
+desc: 机器人回复中命中设定的关键词时，只删掉关键词本身，其余内容照常输出。
+version: v0.1.0
+author: qualcone
+astrbot_version: ">=4.10.4"
+tags:
+  - filter

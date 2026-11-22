@@ -1,0 +1,9 @@
+{
+  "keywords": {
+    "type": "list",
+    "description": "要过滤的关键词",
+    "hint": "机器人回复里出现这些词时会被删掉，其余内容照常发送。例如填「今天」，「今天天气真好」会变成「天气真好」。",
+    "items": {"type": "string"},
+    "default": []
+  }
+}
