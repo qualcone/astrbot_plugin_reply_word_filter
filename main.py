@@ -19,7 +19,7 @@ class KeywordFilter(Star):
 
         # 长的关键词先删，避免 "今天" 和 "今天天气" 这类重叠时删不干净
         words = sorted(
-            (w for w in self.config.get("keywords", []) if w),
+            (w for w in self.config.get("keywords", []) if isinstance(w, str) and w),
             key=len,
             reverse=True,
         )
@@ -34,8 +34,8 @@ class KeywordFilter(Star):
                     text = text.replace(w, "")
                 if text != comp.text:
                     logger.debug("[keyword_filter] 已过滤关键词")
-                if not text.strip():
-                    continue  # 整段被删空了就不发这一段
-                comp.text = text
+                    if not text.strip():
+                        continue  # 整段被删空了就不发这一段
+                    comp.text = text
             new_chain.append(comp)
         result.chain = new_chain
