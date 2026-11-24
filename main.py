@@ -33,7 +33,7 @@ class KeywordFilter(Star):
                 for w in words:
                     text = text.replace(w, "")
                 if text != comp.text:
-                    logger.debug("[keyword_filter] 已过滤关键词")
+                    logger.debug("[reply_word_filter] 已过滤关键词")
                     if not text.strip():
                         continue  # 整段被删空了就不发这一段
                     comp.text = text

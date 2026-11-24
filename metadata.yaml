@@ -1,10 +1,10 @@
-name: astrbot_plugin_keyword_filter
-display_name: 关键词过滤
+name: astrbot_plugin_reply_word_filter
+display_name: 回复关键词过滤
 short_desc: 过滤机器人回复中的指定关键词，只删关键词本身，其余内容照常输出。
 desc: 机器人回复中命中设定的关键词时，只删掉关键词本身，其余内容照常输出。
 version: v0.1.0
 author: qualcone
-repo: https://github.com/qualcone/astrbot_plugin_keyword_filter
+repo: https://github.com/qualcone/astrbot_plugin_reply_word_filter
 astrbot_version: ">=4.10.4"
 tags:
   - filter
